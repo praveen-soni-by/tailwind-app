@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./styles/app.css";
 import "./styles/tailwind.css";

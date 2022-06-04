@@ -1,24 +1,29 @@
-const Header = ({ username, logoutHandler, close }: any) => (
-  <header className="header bg-white shadow py-4  top-0 sticky z-50  px-8 ">
+import { Toggle } from "../../theme/toggle";
+
+const Header = ({ username, logoutHandler, close }: any) => {
+
+  return(
+  <header className="header bg-primary text-primary shadow py-4  top-0 sticky z-50  px-8 ">
     <div className="header-content flex items-center flex-row">
       <span
         className="text-lg font-medium "
       >
         BRAND NAME
       </span>
+  
 
       <div className="flex ml-auto">
         <div className="flex flex-end items-center">
           <div className="flex items-center h-full text-sm">
             <div className="flex items-center h-full">
-              <div
+             <div
                 className="rounded-full h-6 w-6 border shadow-lg 
             text-center
             bg-orange-500
             
             "
               >
-                <span className="text-white capitalize text-md">
+                <span className=" text-white capitalize text-md">
                   {username && username.charAt(0)}
                 </span>
               </div>
@@ -26,14 +31,14 @@ const Header = ({ username, logoutHandler, close }: any) => (
           
 
               <div className="group relative h-full">
-                <div className="text-black flex items-center h-full bg-grey-darkest px-4 cursor-pointer">
-                  <span className="capitalize">{username}</span>
+                <div className="text-black flex items-center h-full  px-4 cursor-pointer">
+                  <span className="capitalize text-primary">{username}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     width="24"
                     height="24"
-                    className="h-6 w-6 text-grey-darker fill-current ml-1"
+                    className="h-6 w-6 text-primary fill-current ml-1"
                   >
                     <path
                       className="heroicon-ui"
@@ -41,14 +46,16 @@ const Header = ({ username, logoutHandler, close }: any) => (
                     />
                   </svg>
                 </div>
-                <div className="hidden shadow-lg group-hover:block absolute pin-r -ml-8 top-full w-48 bg-white">
+                <div className="hidden text-primary  shadow-lg group-hover:block absolute pin-r -ml-8 top-full w-48 bg-primary">
                   <ul className="list-reset">
-                    <li>
+                    <li >
                       <a
                         href="#"
-                        className="px-4 py-2 block text-gray-900 hover:bg-gray-200  no-underline hover:no-underline"
+                        className="px-4 flex  py-2 block text-primary  hover:bg-secondary  no-underline hover:no-underline"
                       >
-                        My account
+                       Dark Mode
+                       <span className="px-3">
+                       <Toggle/>  </span>
                       </a>
                     </li>
                     <li>
@@ -57,7 +64,7 @@ const Header = ({ username, logoutHandler, close }: any) => (
                     <li>
                       <button
                         onClick={logoutHandler}
-                        className="px-4 py-2 w-full text-left  text-gray-900 hover:bg-gray-200 no-underline hover:no-underline"
+                        className="px-4 py-2 w-full text-left  text-primary  hover:bg-secondary no-underline hover:no-underline"
                       >
                         Logout
                       </button>
@@ -72,13 +79,14 @@ const Header = ({ username, logoutHandler, close }: any) => (
       </div>
     </div>
   </header>
-);
+)
+}
 
 const MobileHeader = ({ close }: any) => (
   <label
     htmlFor="menu-open"
     id="mobile-menu-button"
-    className=" p-2 focus:outline-none   md:hidden cursor-pointer hover:text-white hover:bg-primary-800 rounded-md"
+    className=" p-2 focus:outline-none bg-secondary   md:hidden cursor-pointer hover:text-white hover:bg-primary-800 rounded-md"
   >
     <svg        id="menu-open-icon"
 xmlns="http://www.w3.org/2000/svg"       className="h-6 w-6 transition duration-200 ease-in-out"

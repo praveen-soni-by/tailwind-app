@@ -1,9 +1,19 @@
 module.exports = {
+  darkMode: 'media',
   theme: {
     ripple: theme => ({
       colors: theme('colors')
   }),
     extend: {
+      backgroundColor: {
+        primary: 'var(--color-bg-primary)',
+        secondary: 'var(--color-bg-secondary)',
+      },
+      textColor: {
+        accent: 'var(--color-text-accent)',
+        primary: 'var(--color-text-primary)',
+        secondary: 'var(--color-text-secondary)',
+      },
       transitionProperty: {
         'width': 'width'
     },

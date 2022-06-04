@@ -25,3 +25,25 @@
         @apply px-2 py-2 text-center text-sm bg-white
     }
 }
+
+
+:root {  
+    --light-background: #1565c0;
+    --light-secondary-background: #003c8f;
+     --text-dark:#fff;
+     --text-light: #fff;
+    --dark-background: #04293A;
+    --dark-secondary-background: rgb(5, 7, 113);
+}
+
+html {  
+    --color-text-primary: var(--text-light);
+    --color-bg-primary: var(--light-background);
+    --color-bg-secondary: var(--light-secondary-background);
+
+}
+html.dark { 
+    --color-text-primary: var(--text-dark);
+    --color-bg-primary: var(--dark-background);
+    --color-bg-secondary: var(--dark-secondary-background);
+}

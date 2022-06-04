@@ -26,9 +26,9 @@ export default function Layout({ children }: any) {
         <input type="checkbox" id="menu-open" className="hidden" />
         <Sidebar close={close} />
         <main
-          className="main flex flex-col flex-grow -ml-56 md:ml-0 transition-all duration-150 ease-in">
+          className="flex flex-col flex-grow -ml-56 md:ml-0 transition-all duration-150 ease-in">
           <Header close={close} username="User" logoutHandler={logoutHandler} />
-          <div className="main-content flex flex-col flex-grow p-2">
+          <div className="main-content flex flex-col flex-grow  dark:bg-gray-300">
             {children}
           </div>
         </main>

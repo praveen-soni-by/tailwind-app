@@ -5,7 +5,8 @@ import { MainRoutes } from "./routes/routes";
 function App() {
   return (
     <BrowserRouter>
-        <MainRoutes/>
+   <MainRoutes/>
+ 
     </BrowserRouter>
 
   );

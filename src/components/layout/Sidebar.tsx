@@ -41,7 +41,7 @@ const Sidebar = ({ close }: any | undefined) => {
      h-screen
      sticky
      transition-all	
-     transition-slowest bg-primary-500 transform -translate-x-full 
+     transition-slowest bg-primary transform -translate-x-full 
      md:translate-x-0  
      duration-150 ease-in
    "
@@ -49,7 +49,7 @@ const Sidebar = ({ close }: any | undefined) => {
       <div className="flex flex-col space-y-6 ">
         <NavLink
           to="/"
-          className="text-white flex  space-x-2 px-4 text-center justify-center items-center"
+          className="text-primary flex  space-x-2 px-4 text-center justify-center items-center"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,8 +89,8 @@ const AppNavLink = (props: NavLinkProps) => (
     onClick={props.close}
     className={({ isActive }) =>
       isActive
-        ? "flex ripple-bg-primary-800 hover:bg-primary-800  my-1 mx-2 flex-row items-center h-10 px-3 rounded-lg text-white font-medium"
-        : "flex   ripple-bg-primary-500 hover:bg-primary-800 transition-transform hover:scale-105 my-1 mx-2 flex-row items-center h-10 px-3 rounded-lg text-white font-medium"
+        ? "flex ripple-bg-black  bg-secondary hover:bg-secondary   my-1 mx-2 flex-row items-center h-10 px-3 rounded-lg text-white font-medium"
+        : "flex   ripple-bg-black     bg-primary hover:bg-secondary   transition-transform hover:scale-105 my-1 mx-2 flex-row items-center h-10 px-3 rounded-lg text-white font-medium"
     }
   >
     {props.icon && (
