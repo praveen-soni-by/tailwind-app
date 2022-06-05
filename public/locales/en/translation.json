@@ -1,3 +1,14 @@
 {
-  "home":"My Home"
+  "brandName":"BRAND NAME",
+  "home":"My HOME",
+  "card":"Cards",
+  "model":"PopUps",
+  "stepper":"Stepper",
+  "account":"Account",
+  "overview":"Overview",
+  "logout":"Logout",
+  "dark-mode":"Dark Mode",
+  "table":"Table",
+  "dropdown":"Dropdown"
+
 }

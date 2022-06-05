@@ -1,34 +1,9 @@
-import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import { ChartIcon, HomeIcon, MapIcon } from "../../assets/Icon";
+import { AppNavLink } from "./AppNavLink";
+import { navLinks } from "./navlink";
 
-const navLinks = [
-  {
-    to: "/home",
-    label: "Home",
-    icon: <HomeIcon />,
-  },
-  {
-    to: "/map",
-    label: "Map",
-    icon: <MapIcon />,
-  },
-  {
-    to: "/report",
-    label: "Report",
-    icon: <ChartIcon />,
-  },
-];
-
-interface NavLinkProps {
-  to: string;
-  label: string;
-  icon: JSX.Element;
-  close: () => void;
-}
 
 const Sidebar = ({ close }: any | undefined) => {
-  const { t } = useTranslation();
   return (
     <aside
       id="sidebar"
@@ -72,7 +47,7 @@ const Sidebar = ({ close }: any | undefined) => {
               <AppNavLink
                 close={close}
                 to={navLink.to}
-                label={t(navLink.label)}
+                label={navLink.label}
                 icon={navLink.icon}
               />
             ))}
@@ -83,24 +58,5 @@ const Sidebar = ({ close }: any | undefined) => {
   );
 };
 
-const AppNavLink = (props: NavLinkProps) => (
-  <NavLink
-    to={props.to}
-    onClick={props.close}
-    className={({ isActive }) =>
-      isActive
-        ? "flex ripple-bg-black  bg-secondary hover:bg-secondary   my-1 mx-2 flex-row items-center h-10 px-3 rounded-lg text-white font-medium"
-        : "flex   ripple-bg-black     bg-primary hover:bg-secondary   transition-transform hover:scale-105 my-1 mx-2 flex-row items-center h-10 px-3 rounded-lg text-white font-medium"
-    }
-  >
-    {props.icon && (
-      <span className="flex items-center justify-center   text-gray-400">
-        {props.icon}
-      </span>
-    )}
-
-    <span className="ml-3 overflow-hidden fade-in text-sm">{props.label}</span>
-  </NavLink>
-);
 
 export default Sidebar;
